@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1 (Python 3.11.2 on win32)" generated="20230804 12:03:07.666" rpa="false" schemaversion="4">
+<suite id="s1" name="Open Google Sheet" source="C:\Users\YasodhaS-3242\PycharmProjects\PythonProject\rajeswari_task\tasks\open_google_sheet.robot">
+<test id="s1-t1" name="TestGmailLogin" line="6">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://gmail.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230804 12:03:08.172" level="INFO">Opening browser 'chrome' to base url 'https://gmail.com/'.</msg>
+<msg timestamp="20230804 12:03:08.172" level="INFO">Executing: C:\Users\YasodhaS-3242\PycharmProjects\PythonProject\venv\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --output json</msg>
+<status status="PASS" starttime="20230804 12:03:08.172" endtime="20230804 12:03:11.854"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230804 12:03:11.854" endtime="20230804 12:03:12.000"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20230804 12:03:12.000" endtime="20230804 12:03:12.000"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:identifierId</arg>
+<arg>yashreddy432@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230804 12:03:12.000" level="INFO">Typing text 'yashreddy432@gmail.com' into text field 'id:identifierId'.</msg>
+<status status="PASS" starttime="20230804 12:03:12.000" endtime="20230804 12:03:12.398"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://span[.='Next']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230804 12:03:12.399" level="INFO">Clicking element 'xpath://span[.='Next']'.</msg>
+<status status="PASS" starttime="20230804 12:03:12.399" endtime="20230804 12:03:12.607"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:Passwd</arg>
+<arg>yasodhabharath</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230804 12:03:12.612" level="INFO">Typing text 'yasodhabharath' into text field 'name:Passwd'.</msg>
+<status status="PASS" starttime="20230804 12:03:12.607" endtime="20230804 12:03:15.907"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230804 12:03:17.907" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230804 12:03:15.907" endtime="20230804 12:03:17.907"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://span[.='Next']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230804 12:03:17.907" level="INFO">Clicking element 'xpath://span[.='Next']'.</msg>
+<status status="PASS" starttime="20230804 12:03:17.907" endtime="20230804 12:03:18.031"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>8s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230804 12:03:26.032" level="INFO">Slept 8 seconds</msg>
+<status status="PASS" starttime="20230804 12:03:18.031" endtime="20230804 12:03:26.032"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20230804 12:03:26.037" level="INFO">${title} = Inbox (5) - yashreddy432@gmail.com - Gmail</msg>
+<status status="PASS" starttime="20230804 12:03:26.032" endtime="20230804 12:03:26.037"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${title}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230804 12:03:26.044" endtime="20230804 12:03:26.044"/>
+</kw>
+<if>
+<branch type="IF" condition="&quot;${title}&quot; == &quot;Inbox (5) - yashreddy432@gmail.com - Gmail&quot;">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Login Successful!!!!!!!!!!</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230804 12:03:26.044" endtime="20230804 12:03:26.044"/>
+</kw>
+<status status="PASS" starttime="20230804 12:03:26.044" endtime="20230804 12:03:26.044"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Gmail Login Fail......</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20230804 12:03:26.044" endtime="20230804 12:03:26.044"/>
+</kw>
+<status status="NOT RUN" starttime="20230804 12:03:26.044" endtime="20230804 12:03:26.044"/>
+</branch>
+<status status="PASS" starttime="20230804 12:03:26.044" endtime="20230804 12:03:26.044"/>
+</if>
+<status status="PASS" starttime="20230804 12:03:08.172" endtime="20230804 12:03:26.044"/>
+</test>
+<test id="s1-t2" name="Open Google Sheet or Excel" line="26">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://a[@aria-label='Google apps']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230804 12:03:26.044" level="INFO">Clicking element 'xpath://a[@aria-label='Google apps']'.</msg>
+<status status="PASS" starttime="20230804 12:03:26.044" endtime="20230804 12:03:26.219"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>xpath://iframe[@name='app']</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20230804 12:03:26.225" level="INFO">Selecting frame 'xpath://iframe[@name='app']'.</msg>
+<status status="PASS" starttime="20230804 12:03:26.225" endtime="20230804 12:03:26.924"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://span[.='Sheets']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230804 12:03:26.924" level="INFO">Clicking element 'xpath://span[.='Sheets']'.</msg>
+<status status="PASS" starttime="20230804 12:03:26.924" endtime="20230804 12:03:27.200"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>12s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230804 12:03:39.209" level="INFO">Slept 12 seconds</msg>
+<status status="PASS" starttime="20230804 12:03:27.208" endtime="20230804 12:03:39.209"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>Google Sheets</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20230804 12:03:39.209" endtime="20230804 12:03:39.428"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://img[@src='https://ssl.gstatic.com/docs/templates/thumbnails/sheets-blank-googlecolors.png']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230804 12:03:39.432" level="INFO">Clicking element 'xpath://img[@src='https://ssl.gstatic.com/docs/templates/thumbnails/sheets-blank-googlecolors.png']'.</msg>
+<status status="PASS" starttime="20230804 12:03:39.432" endtime="20230804 12:03:45.053"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230804 12:03:50.062" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230804 12:03:45.053" endtime="20230804 12:03:50.062"/>
+</kw>
+<status status="PASS" starttime="20230804 12:03:26.044" endtime="20230804 12:03:50.063"/>
+</test>
+<test id="s1-t3" name="Enter Content" line="36">
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//input[@id]</arg>
+<arg>A1</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230804 12:03:50.066" level="INFO">Sending key(s) ('A1',) to //input[@id] element.</msg>
+<msg timestamp="20230804 12:03:50.413" level="INFO">Sending keys A1</msg>
+<status status="PASS" starttime="20230804 12:03:50.066" endtime="20230804 12:03:50.453"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//div[@class="cell-input"]</arg>
+<arg>NAMES</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230804 12:03:50.453" level="INFO">Typing text 'NAMES' into text field '//div[@class="cell-input"]'.</msg>
+<status status="PASS" starttime="20230804 12:03:50.453" endtime="20230804 12:03:50.791"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230804 12:03:52.792" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230804 12:03:50.791" endtime="20230804 12:03:52.792"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>//input[@id]</arg>
+<arg>C1</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20230804 12:03:52.792" level="INFO">Sending key(s) ('C1',) to //input[@id] element.</msg>
+<msg timestamp="20230804 12:03:53.234" level="INFO">Sending keys C1</msg>
+<status status="PASS" starttime="20230804 12:03:52.792" endtime="20230804 12:03:53.269"/>
+</kw>
+<kw name="Press Key" library="SeleniumLibrary">
+<arg>//input[@id]</arg>
+<arg>\\13</arg>
+<doc>*DEPRECATED in SeleniumLibrary 4.0.* use `Press Keys` instead.</doc>
+<msg timestamp="20230804 12:03:53.269" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
+<status status="PASS" starttime="20230804 12:03:53.269" endtime="20230804 12:03:53.369"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//div[@class="cell-input"]</arg>
+<arg>EXPERIANCE</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230804 12:03:53.369" level="INFO">Typing text 'EXPERIANCE' into text field '//div[@class="cell-input"]'.</msg>
+<status status="PASS" starttime="20230804 12:03:53.369" endtime="20230804 12:03:53.667"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230804 12:03:55.670" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230804 12:03:53.670" endtime="20230804 12:03:55.670"/>
+</kw>
+<status status="PASS" starttime="20230804 12:03:50.065" endtime="20230804 12:03:55.670"/>
+</test>
+<test id="s1-t4" name="Share with Mentor" line="47">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://div[@aria-label='Share. Private to only me. ']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230804 12:03:55.670" level="INFO">Clicking element 'xpath://div[@aria-label='Share. Private to only me. ']'.</msg>
+<status status="PASS" starttime="20230804 12:03:55.670" endtime="20230804 12:03:55.835"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://input[contains(@class,'userInput')]</arg>
+<arg>demo_test</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230804 12:03:55.837" level="INFO">Typing text 'demo_test' into text field 'xpath://input[contains(@class,'userInput')]'.</msg>
+<status status="PASS" starttime="20230804 12:03:55.836" endtime="20230804 12:03:56.049"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://button[.='Save']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230804 12:03:56.049" level="INFO">Clicking element 'xpath://button[.='Save']'.</msg>
+<status status="PASS" starttime="20230804 12:03:56.049" endtime="20230804 12:03:56.213"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>xpath://iframe[@class='share-client-content-iframe']</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20230804 12:03:56.219" level="INFO">Selecting frame 'xpath://iframe[@class='share-client-content-iframe']'.</msg>
+<status status="PASS" starttime="20230804 12:03:56.218" endtime="20230804 12:03:57.087"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://input[@type='text']</arg>
+<arg>yasodhareddy432@gmail.com</arg>
+<arg>ENTER</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230804 12:03:57.088" level="INFO">Typing text 'yasodhareddy432@gmail.com' into text field 'xpath://input[@type='text']'.</msg>
+<status status="PASS" starttime="20230804 12:03:57.088" endtime="20230804 12:03:57.553"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230804 12:03:59.556" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230804 12:03:57.556" endtime="20230804 12:03:59.556"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://span[@class=' VfPpkd-StrnGf-rymPhb-L8ivfd-fmcmS']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230804 12:03:59.559" level="INFO">Clicking element 'xpath://span[@class=' VfPpkd-StrnGf-rymPhb-L8ivfd-fmcmS']'.</msg>
+<status status="PASS" starttime="20230804 12:03:59.558" endtime="20230804 12:03:59.872"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath://textarea[contains(@class,'VfPpkd')]</arg>
+<arg>I am sharing a demo file</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230804 12:03:59.872" level="INFO">Typing text 'I am sharing a demo file' into text field 'xpath://textarea[contains(@class,'VfPpkd')]'.</msg>
+<status status="PASS" starttime="20230804 12:03:59.872" endtime="20230804 12:04:00.283"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[.='Send']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230804 12:04:00.295" level="INFO">Clicking element '//button[.='Send']'.</msg>
+<status status="PASS" starttime="20230804 12:04:00.283" endtime="20230804 12:04:00.520"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230804 12:04:04.521" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20230804 12:04:00.520" endtime="20230804 12:04:04.521"/>
+</kw>
+<status status="PASS" starttime="20230804 12:03:55.670" endtime="20230804 12:04:04.521"/>
+</test>
+<status status="PASS" starttime="20230804 12:03:07.671" endtime="20230804 12:04:04.524"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Open Google Sheet">Open Google Sheet</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230804 12:03:53.269" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
+</errors>
+</robot>
